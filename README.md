@@ -47,4 +47,6 @@ c113-demo-nav-flex/
 
 - [Flexbox Froggy](https://flexboxfroggy.com/#fr) — 24 niveaux pour maîtriser `justify-content`
   et `align-items`
+- [Flexbox Sandbox](https://flexbox.tirtho.ch/) — règle les propriétés du conteneur et des
+  éléments, observe les axes et copie le CSS généré
 - Plan de la séance : https://devjs.ch/cours/113/plan#seance-9-28-octobre-2026
