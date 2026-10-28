@@ -23,17 +23,15 @@ footer {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* les <li> enfants se placent côte à côte */
-    flex-wrap: wrap; /* pas assez de place : les liens vont à la ligne */
-    gap: 0.5rem; /* espace entre les éléments, jamais avant le premier ni après le dernier */
+    display: flex;
+    flex-direction: column; /* mobile d'abord : un lien par ligne, sur toute la largeur */
+    gap: 0.25rem; /* espace entre les éléments, jamais avant le premier ni après le dernier */
 }
 
-/* Le header devient lui aussi un conteneur flex : logo à gauche, menu à droite */
+/* Mobile d'abord : le logo, puis le menu en dessous */
 .header {
     display: flex;
-    justify-content: space-between; /* axe principal (horizontal) */
-    align-items: center; /* axe secondaire (vertical) */
-    flex-wrap: wrap; /* écran étroit : le menu passe sous le logo */
+    flex-direction: column;
     gap: 0.5rem;
     padding: 1rem 1.5rem;
     background-color: var(--color-dark);
@@ -58,4 +56,18 @@ footer {
 .menu a:hover,
 .menu a:focus {
     background-color: var(--color-primary);
+}
+
+/* Dès 768 px de large, il y a la place : on repasse en ligne */
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between; /* axe principal (horizontal) */
+        align-items: center; /* axe secondaire (vertical) */
+    }
+
+    .menu {
+        flex-direction: row; /* les liens côte à côte */
+        gap: 0.5rem;
+    }
 }
