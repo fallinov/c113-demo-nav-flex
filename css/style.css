@@ -24,4 +24,5 @@ footer {
     margin: 0;
     padding: 0;
     display: flex; /* les <li> enfants se placent côte à côte */
+    gap: 0.5rem; /* espace entre les éléments, jamais avant le premier ni après le dernier */
 }
