@@ -1,0 +1,19 @@
+:root {
+    --color-bg: #f8fafc;
+    --color-text: #1f2937;
+    --color-dark: #1f2937;
+    --color-primary: #0f766e;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+main,
+footer {
+    padding: 1rem 1.5rem;
+}
