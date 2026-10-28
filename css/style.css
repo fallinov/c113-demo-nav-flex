@@ -27,7 +27,11 @@ footer {
     gap: 0.5rem; /* espace entre les éléments, jamais avant le premier ni après le dernier */
 }
 
+/* Le header devient lui aussi un conteneur flex : logo à gauche, menu à droite */
 .header {
+    display: flex;
+    justify-content: space-between; /* axe principal (horizontal) */
+    align-items: center; /* axe secondaire (vertical) */
     padding: 1rem 1.5rem;
     background-color: var(--color-dark);
 }
