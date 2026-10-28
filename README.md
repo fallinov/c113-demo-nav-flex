@@ -3,14 +3,16 @@
 Démo du cours 113 (séance 9) : une liste de liens brute devient une barre de navigation
 grâce à Flexbox.
 
-Tu es sur la branche **`solution`**. Le code de départ, à cloner pour refaire l'exercice, est
-sur la branche [`main`](https://github.com/fallinov/c113-demo-nav-flex).
+Tu es sur la branche **`solution-etape-8`** : la solution de la séance 9, plus l'étape 8
+(mobile d'abord, séance 11). La solution de la séance 9 seule est sur la branche
+[`solution`](https://github.com/fallinov/c113-demo-nav-flex/tree/solution), le code de départ
+sur [`main`](https://github.com/fallinov/c113-demo-nav-flex).
 
 **Site en ligne** : https://fallinov.github.io/c113-demo-nav-flex/
 
 ## Les étapes, un commit chacune
 
-Ouvre les [commits de cette branche](https://github.com/fallinov/c113-demo-nav-flex/commits/solution/)
+Ouvre les [commits de cette branche](https://github.com/fallinov/c113-demo-nav-flex/commits/solution-etape-8/)
 et clique sur un commit : GitHub montre exactement les lignes ajoutées (en vert) à chaque étape.
 
 | Étape | Commit | Ce qui change à l'écran |
@@ -22,6 +24,7 @@ et clique sur un commit : GitHub montre exactement les lignes ajoutées (en vert
 | 5 | Header sombre, liens cliquables | Fond sombre, zone cliquable, survol et focus |
 | 6 | Header en flex | Logo à gauche, menu à droite, centrés verticalement |
 | 7 | `flex-wrap` | Sur téléphone, le menu passe à la ligne au lieu de déborder |
+| 8 | Mobile d'abord (séance 11) | Sur téléphone, un lien par ligne ; dès 768 px, la barre en ligne |
 
 ## À retenir
 
@@ -33,6 +36,8 @@ et clique sur un commit : GitHub montre exactement les lignes ajoutées (en vert
   et les liens sur la même ligne médiane.
 - `gap` espace les éléments **entre eux**, sans marge en trop au début ni à la fin.
 - `flex-wrap: wrap` autorise le passage à la ligne quand la place manque.
+- Mobile d'abord : le CSS de base vise le téléphone (`flex-direction: column`), la media query
+  `@media (min-width: 768px)` ajoute la mise en page des grands écrans (`flex-direction: row`).
 
 ## Structure
 
