@@ -17,3 +17,10 @@ main,
 footer {
     padding: 1rem 1.5rem;
 }
+
+/* Une liste de navigation n'a pas besoin de puces ni du retrait par défaut */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
