@@ -26,3 +26,29 @@ footer {
     display: flex; /* les <li> enfants se placent côte à côte */
     gap: 0.5rem; /* espace entre les éléments, jamais avant le premier ni après le dernier */
 }
+
+.header {
+    padding: 1rem 1.5rem;
+    background-color: var(--color-dark);
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Le lien occupe toute la case : la zone cliquable est plus grande */
+.menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover,
+.menu a:focus {
+    background-color: var(--color-primary);
+}
