@@ -17,3 +17,68 @@ main,
 footer {
     padding: 1rem 1.5rem;
 }
+
+header {
+    background-color: var(--color-dark);
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75rem;
+}
+
+header a {
+    color: var(--color-bg);
+    text-decoration: none;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0 ;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.menu a {
+    color: var(--color-bg);
+    padding: 0.6rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.menu a:hover,
+.menu a:focus,
+.menu a.actif {
+   background-color: var(--color-primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
