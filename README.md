@@ -3,12 +3,15 @@
 Démo du cours 113 (séance 9) : une liste de liens brute devient une barre de navigation
 grâce à Flexbox.
 
+Tu es sur la branche **`solution`**. Le code de départ, à cloner pour refaire l'exercice, est
+sur la branche [`main`](https://github.com/fallinov/c113-demo-nav-flex).
+
 **Site en ligne** : https://fallinov.github.io/c113-demo-nav-flex/
 
 ## Les étapes, un commit chacune
 
-Ouvre l'onglet **Commits** du dépôt et clique sur un commit : GitHub montre exactement les
-lignes ajoutées (en vert) à chaque étape.
+Ouvre les [commits de cette branche](https://github.com/fallinov/c113-demo-nav-flex/commits/solution/)
+et clique sur un commit : GitHub montre exactement les lignes ajoutées (en vert) à chaque étape.
 
 | Étape | Commit | Ce qui change à l'écran |
 |-------|--------|-------------------------|
@@ -44,6 +47,26 @@ c113-demo-nav-flex/
 ```
 
 ## S'entraîner
+
+Nuxy, formation HTML & CSS, **module 10 — Flexbox** :
+
+- [Introduction : Flexbox](https://www.nuxy.ch/exercises/css-intro-flexbox)
+- [Passe en mode flex](https://www.nuxy.ch/exercises/css-display-flex)
+- [Répartis sur l'axe](https://www.nuxy.ch/exercises/css-justify-content)
+- [Centre sur l'autre axe](https://www.nuxy.ch/exercises/css-align-items)
+- [Des espaces sans marges](https://www.nuxy.ch/exercises/css-gap)
+- [Colonne ou rangée](https://www.nuxy.ch/exercises/css-flex-direction)
+- [Défi : la navbar parfaite](https://www.nuxy.ch/exercises/css-barre-navigation)
+- [Examen du module 10](https://www.nuxy.ch/exercises/css-quiz-flexbox)
+
+Pour aller plus loin :
+
+- [Tu es ici](https://www.nuxy.ch/exercises/css-page-en-cours) (module 11) — signaler la page
+  en cours dans le menu
+- [Le menu qui s'empile](https://www.nuxy.ch/exercises/css-menu-responsive) (module 12) — le
+  menu en colonne sur téléphone, en rangée sur grand écran
+
+Autres outils :
 
 - [Flexbox Froggy](https://flexboxfroggy.com/#fr) — 24 niveaux pour maîtriser `justify-content`
   et `align-items`
