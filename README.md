@@ -8,9 +8,12 @@ comme une simple liste à puces.
 
 ## Démarrer
 
-1. Dans WebStorm : **File → New → Project from Version Control**, colle l'URL de ce dépôt.
-2. Ouvre `index.html` dans Brave ou Firefox.
-3. Écris ton CSS dans `css/style.css`, une étape après l'autre, et recharge la page à chaque fois.
+1. En haut de cette page : **Use this template → Create a new repository**. Choisis ton compte
+   comme propriétaire et laisse *Include all branches* décoché : tu obtiens **ta propre copie**,
+   sur laquelle tu peux faire commit et push.
+2. Dans WebStorm : **File → New → Project from Version Control**, colle l'URL de **ta copie**.
+3. Ouvre `index.html` dans Brave ou Firefox.
+4. Écris ton CSS dans `css/style.css`, une étape après l'autre, et recharge la page à chaque fois.
 
 ## Les étapes
 
