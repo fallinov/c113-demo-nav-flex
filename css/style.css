@@ -40,15 +40,15 @@ footer {
     list-style: none; /* retire les puces */
     margin: 0; /* retire la marge par défaut du ul */
     padding: 0; /* retire le retrait à gauche, qui est un padding */
-    display: flex;
+    display: flex; /* les <li> enfants sont rangés par Flexbox */
     flex-direction: column; /* mobile d'abord : un lien par ligne, sur toute la largeur */
     gap: 0.25rem; /* espace entre les éléments, jamais avant le premier ni après le dernier */
 }
 
 /* Mobile d'abord : le logo, puis le menu en dessous */
 .header {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* le logo et le menu sont rangés par Flexbox */
+    flex-direction: column; /* le menu passe sous le logo */
     gap: 0.5rem;
     padding: 1rem 1.5rem; /* 16 px en haut et en bas, 24 px à gauche et à droite */
     background-color: var(--color-dark);
