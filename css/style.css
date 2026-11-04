@@ -83,9 +83,9 @@ header a {
    background-color: var(--color-primary);
 }
 
-/* Le contenu a une largeur maximale et reste centré dans la fenêtre */
-main {
-    background-color: yellow; /* pour la démo : rend visible la zone occupée par le main */
+/* Le contenu et le pied de page ont une largeur maximale et restent centrés dans la fenêtre */
+main,
+footer {
     margin-right: auto; /* auto à droite et à gauche : la place restante est partagée */
     margin-left: auto;
     max-width: 800px; /* un plafond : sans lui, il n'y a aucune place à partager */
