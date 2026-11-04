@@ -3,14 +3,18 @@
 Démo du cours 113 (séance 9) : une liste de liens brute devient une barre de navigation
 grâce à Flexbox.
 
-Tu es sur la branche **`solution`**. Le code de départ, à cloner pour refaire l'exercice, est
-sur la branche [`main`](https://github.com/fallinov/c113-demo-nav-flex).
+Tu es sur la branche **`solution-etape-9`** : la solution de la séance 9, plus l'étape 9
+(mise en page, séance 10). La solution de la séance 9 seule est sur la branche
+[`solution`](https://github.com/fallinov/c113-demo-nav-flex/tree/solution), le code de départ
+sur [`main`](https://github.com/fallinov/c113-demo-nav-flex). L'étape 8 (mobile d'abord,
+séance 11) a sa propre branche,
+[`solution-etape-8`](https://github.com/fallinov/c113-demo-nav-flex/tree/solution-etape-8).
 
 **Site en ligne** : https://fallinov.github.io/c113-demo-nav-flex/
 
 ## Les étapes, un commit chacune
 
-Ouvre les [commits de cette branche](https://github.com/fallinov/c113-demo-nav-flex/commits/solution/)
+Ouvre les [commits de cette branche](https://github.com/fallinov/c113-demo-nav-flex/commits/solution-etape-9/)
 et clique sur un commit : GitHub montre exactement les lignes ajoutées (en vert) à chaque étape.
 
 | Étape | Commit | Ce qui change à l'écran |
@@ -22,6 +26,9 @@ et clique sur un commit : GitHub montre exactement les lignes ajoutées (en vert
 | 5 | Header sombre, liens cliquables | Fond sombre, zone cliquable, survol et focus |
 | 6 | Header en flex | Logo à gauche, menu à droite, centrés verticalement |
 | 7 | `flex-wrap` | Sur téléphone, le menu passe à la ligne au lieu de déborder |
+| 9 | `aria-current="page"` | Le lien de la page affichée reste en couleur |
+| 9 | `max-width` et `margin: 0 auto` | Sur grand écran, le contenu reste centré |
+| 9 | `transition` | Au survol, le fond du lien change en douceur |
 
 ## À retenir
 
@@ -33,6 +40,10 @@ et clique sur un commit : GitHub montre exactement les lignes ajoutées (en vert
   et les liens sur la même ligne médiane.
 - `gap` espace les éléments **entre eux**, sans marge en trop au début ni à la fin.
 - `flex-wrap: wrap` autorise le passage à la ligne quand la place manque.
+- `aria-current="page"` dit au navigateur quel lien mène à la page affichée : il s'écrit sur
+  un lien différent à chaque page, et `[aria-current="page"]` le vise en CSS.
+- `max-width` plafonne la largeur sans empêcher le bloc de rétrécir. `margin: 0 auto` partage
+  la place restante à gauche et à droite : sans `max-width`, il n'y a rien à partager.
 
 ## Structure
 
