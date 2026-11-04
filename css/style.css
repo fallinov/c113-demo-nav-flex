@@ -13,8 +13,11 @@ body {
     background-color: var(--color-bg);
 }
 
+/* Le contenu a une largeur maximale et reste centré dans la fenêtre */
 main,
 footer {
+    max-width: 60rem; /* un plafond : le bloc rétrécit encore sur un petit écran */
+    margin: 0 auto; /* rien en haut et en bas, la place restante partagée à gauche et à droite */
     padding: 1rem 1.5rem;
 }
 
