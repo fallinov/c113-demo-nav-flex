@@ -1,28 +1,45 @@
+/* La palette en variables : une seule ligne à changer pour tout le site */
 :root {
-    --color-bg: #f8fafc;
-    --color-text: #1f2937;
-    --color-dark: #1f2937;
-    --color-primary: #0f766e;
+    --color-bg: #f8fafc; /* fond de la page */
+    --color-text: #1f2937; /* couleur du texte */
+    --color-dark: #1f2937; /* fond du header */
+    --color-primary: #0f766e; /* couleur d'accent des liens du menu */
 }
 
 body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    line-height: 1.6;
+    margin: 0; /* retire la marge du navigateur : le header touche les bords */
+    font-family: system-ui, sans-serif; /* la police de l'appareil, aucun fichier à charger */
+    line-height: 1.6; /* sans unité : 1.6 fois la taille du texte */
     color: var(--color-text);
     background-color: var(--color-bg);
 }
 
+/*
+   Les unités rem et em : deux tailles relatives au texte, à la place des px.
+
+   - rem (« root em ») se base sur la taille du texte de la racine, <html>.
+     Elle vaut 16 px si le visiteur garde le réglage par défaut de son navigateur.
+     1rem = 16 px, 1.5rem = 24 px, 0.5rem = 8 px : la même valeur partout dans la page.
+
+   - em se base sur la taille du texte de l'élément lui-même : dans un élément en
+     font-size: 20px, 1em = 20 px. Pour font-size, c'est la taille du parent qui compte.
+     La valeur change donc d'un élément à l'autre.
+
+   Ce fichier utilise rem : le calcul reste simple, et si le visiteur augmente la taille
+   du texte dans son navigateur, les espacements suivent.
+*/
+
+/* L'espace autour du contenu */
 main,
 footer {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem; /* 16 px en haut et en bas, 24 px à gauche et à droite */
 }
 
 /* Une liste de navigation n'a pas besoin de puces ni du retrait par défaut */
 .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style: none; /* retire les puces */
+    margin: 0; /* retire la marge par défaut du ul */
+    padding: 0; /* retire le retrait à gauche, qui est un padding */
     display: flex; /* les <li> enfants se placent côte à côte */
     flex-wrap: wrap; /* pas assez de place : les liens vont à la ligne */
     gap: 0.5rem; /* espace entre les éléments, jamais avant le premier ni après le dernier */
@@ -35,26 +52,27 @@ footer {
     align-items: center; /* axe secondaire (vertical) */
     flex-wrap: wrap; /* écran étroit : le menu passe sous le logo */
     gap: 0.5rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem; /* 16 px en haut et en bas, 24 px à gauche et à droite */
     background-color: var(--color-dark);
 }
 
 .logo {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* 1.25 × 16 px = 20 px */
     font-weight: bold;
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* retire le soulignement du lien */
 }
 
 /* Le lien occupe toute la case : la zone cliquable est plus grande */
 .menu a {
-    display: block;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    color: white;
+    display: block; /* le lien remplit son <li> : le padding agrandit la zone cliquable */
+    padding: 0.5rem 1rem; /* 8 px en haut et en bas, 16 px à gauche et à droite */
+    border-radius: 0.25rem; /* coins légèrement arrondis : 4 px */
+    color: white; /* remplace le bleu par défaut des liens */
     text-decoration: none;
 }
 
+/* :hover = la souris sur le lien, :focus = le lien atteint au clavier avec Tab */
 .menu a:hover,
 .menu a:focus {
     background-color: var(--color-primary);
