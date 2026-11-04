@@ -51,16 +51,25 @@ header a {
     color: var(--color-bg);
     padding: 0.6rem 1rem;
     border-radius: 0.25rem;
+    transition: background-color 0.25s;
 }
 
 .menu a:hover,
 .menu a:focus,
-.menu a.actif {
+.menu [aria-current="page"] {
    background-color: var(--color-primary);
 }
 
+main {
+    background-color: yellow;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+}
 
-
+p {
+    max-width: 60ch;
+}
 
 
 
