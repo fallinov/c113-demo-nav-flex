@@ -1,74 +1,99 @@
+/* La palette en variables : une seule ligne à changer pour tout le site */
 :root {
-    --color-bg: #f8fafc;
-    --color-text: #1f2937;
-    --color-dark: #1f2937;
-    --color-primary: #0f766e;
+    --color-bg: #f8fafc; /* fond de la page */
+    --color-text: #1f2937; /* couleur du texte */
+    --color-dark: #1f2937; /* fond du header */
+    --color-primary: #0f766e; /* couleur d'accent des liens du menu */
 }
 
 body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    line-height: 1.6;
+    margin: 0; /* retire la marge du navigateur : le header touche les bords */
+    font-family: system-ui, sans-serif; /* la police de l'appareil, aucun fichier à charger */
+    line-height: 1.6; /* sans unité : 1.6 fois la taille du texte */
     color: var(--color-text);
     background-color: var(--color-bg);
 }
 
+/*
+   Les unités rem et em : deux tailles relatives au texte, à la place des px.
+
+   - rem (« root em ») se base sur la taille du texte de la racine, <html>.
+     Elle vaut 16 px si le visiteur garde le réglage par défaut de son navigateur.
+     1rem = 16 px, 1.5rem = 24 px, 0.5rem = 8 px : la même valeur partout dans la page.
+
+   - em se base sur la taille du texte de l'élément lui-même : dans un élément en
+     font-size: 20px, 1em = 20 px. Pour font-size, c'est la taille du parent qui compte.
+     La valeur change donc d'un élément à l'autre. Ce fichier n'en utilise pas.
+
+   rem garde le calcul simple, et si le visiteur augmente la taille du texte dans son
+   navigateur, les espacements suivent.
+*/
+
+/* L'espace autour du contenu */
 main,
 footer {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem; /* 16 px en haut et en bas, 24 px à gauche et à droite */
 }
 
+/* Le header est un conteneur flex : logo à gauche, menu à droite */
 header {
     background-color: var(--color-dark);
-    padding: 1rem 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: .75rem;
+    padding: 1rem 1.5rem; /* 16 px en haut et en bas, 24 px à gauche et à droite */
+    display: flex; /* ses enfants directs, le logo et le nav, se placent côte à côte */
+    flex-wrap: wrap; /* écran étroit : le menu passe sous le logo */
+    justify-content: space-between; /* axe principal (horizontal) : la place libre va au milieu */
+    align-items: center; /* axe secondaire (vertical) : logo et menu alignés */
+    gap: .75rem; /* 12 px, .75rem s'écrit aussi 0.75rem */
 }
 
+/* Tous les liens du header : clairs sur fond sombre */
 header a {
     color: var(--color-bg);
-    text-decoration: none;
+    text-decoration: none; /* retire le soulignement */
 }
 
 .logo {
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* 1.25 × 16 px = 20 px */
 }
 
+/* Une liste de navigation n'a pas besoin de puces ni du retrait par défaut */
 .menu {
-    list-style-type: none;
-    padding: 0 ;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    list-style-type: none; /* retire les puces */
+    padding: 0 ; /* retire le retrait à gauche, qui est un padding */
+    margin: 0; /* retire la marge par défaut du ul */
+    display: flex; /* les <li> enfants se placent côte à côte */
+    flex-wrap: wrap; /* pas assez de place : les liens vont à la ligne */
+    gap: 1rem; /* 16 px entre les éléments, jamais avant le premier ni après le dernier */
 }
 
 .menu a {
     color: var(--color-bg);
-    padding: 0.6rem 1rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.25s;
+    padding: 0.6rem 1rem; /* 9.6 px en haut et en bas, 16 px à gauche et à droite */
+    border-radius: 0.25rem; /* coins légèrement arrondis : 4 px */
+    transition: background-color 0.25s; /* le fond change en douceur, en un quart de seconde */
 }
 
+/* :hover = la souris sur le lien, :focus = le lien atteint au clavier avec Tab.
+   [aria-current="page"] vise le lien de la page affichée : les crochets testent un attribut,
+   et le style suit cet attribut, sans classe en plus */
 .menu a:hover,
 .menu a:focus,
 .menu [aria-current="page"] {
    background-color: var(--color-primary);
 }
 
+/* Le contenu a une largeur maximale et reste centré dans la fenêtre */
 main {
-    background-color: yellow;
-    margin-right: auto;
+    background-color: yellow; /* pour la démo : rend visible la zone occupée par le main */
+    margin-right: auto; /* auto à droite et à gauche : la place restante est partagée */
     margin-left: auto;
-    max-width: 800px;
+    max-width: 800px; /* un plafond : sans lui, il n'y a aucune place à partager */
 }
 
+/* Une ligne trop longue se lit mal : on limite la largeur des paragraphes */
 p {
-    max-width: 60ch;
+    max-width: 60ch; /* ch = la largeur du caractère 0 de la police, soit environ 60 caractères */
 }
 
 
