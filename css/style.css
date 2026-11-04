@@ -55,7 +55,9 @@ footer {
     text-decoration: none;
 }
 
+/* La page en cours : le style suit l'attribut, pas besoin de classe en plus */
 .menu a:hover,
-.menu a:focus {
+.menu a:focus,
+.menu a[aria-current="page"] {
     background-color: var(--color-primary);
 }
