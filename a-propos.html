@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
+    <!-- Sans cette ligne, un téléphone dézoome la page et le responsive ne fonctionne pas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>À propos — Mon portfolio</title>
     <link rel="stylesheet" href="css/style.css">
@@ -9,8 +10,11 @@
 <body>
 
 <header class="header">
+    <!-- Le nom du site est un lien stylé, pas un h1 : le h1 de la page est dans main -->
     <a class="logo" href="index.html">Mon portfolio</a>
+    <!-- Le même menu sur chaque page : copie ce bloc complet dans chaque fichier -->
     <nav>
+        <!-- La liste est le conteneur flex, ses enfants directs (les li) se rangent côte à côte -->
         <ul class="menu">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="projets.html">Projets</a></li>
@@ -20,6 +24,7 @@
     </nav>
 </header>
 
+<!-- Le contenu propre à cette page, avec un seul h1 -->
 <main>
     <h1>À propos</h1>
     <p>Même header, même navigation, sur toutes les pages : le visiteur sait toujours où il est et comment repartir.</p>
