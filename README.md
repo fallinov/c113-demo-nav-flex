@@ -13,7 +13,7 @@ comme une simple liste à puces.
    sur laquelle tu peux faire commit et push.
 2. Dans WebStorm : **File → New → Project from Version Control**, colle l'URL de **ta copie**.
 3. Ouvre `index.html` dans Brave ou Firefox.
-4. Écris ton CSS dans `css/style.css`, une étape après l'autre, et recharge la page à chaque fois.
+4. Écris ton CSS dans `style.css`, une étape après l'autre, et recharge la page à chaque fois.
 
 ## Les étapes
 
