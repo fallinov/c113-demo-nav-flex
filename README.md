@@ -4,7 +4,7 @@ Démo du cours 113 (séance 9) : une liste de liens brute devient une barre de n
 grâce à Flexbox.
 
 Tu es sur la branche **`grid-solution`** : le résultat de la démo CSS Grid (séance 11), en
-trois commits, un par étape. Le point de départ, six cartes empilées sans grille, est sur la
+trois commits, un par étape. Le point de départ, sept cartes empilées sans grille, est sur la
 branche [`grid-depart`](https://github.com/fallinov/c113-demo-nav-flex/tree/grid-depart). Les
 deux partent de
 [`solution-etape-9`](https://github.com/fallinov/c113-demo-nav-flex/tree/solution-etape-9), la
@@ -12,7 +12,7 @@ barre de navigation terminée.
 
 ## La démo Grid, trois étapes
 
-Tout se passe dans `style.css`, sur `.galerie`, la `<section>` qui contient les six `<article>`.
+Tout se passe dans `style.css`, sur `.galerie`, la `<section>` qui contient les sept `<article>`.
 Teste à 375 px après chaque étape, puis élargis la fenêtre.
 
 | Étape | Règle | Ce qui change à l'écran |
@@ -75,7 +75,7 @@ c113-demo-nav-flex/
 ├── contact.html
 ├── style.css
 └── images/
-    └── projet-1.svg … projet-6.svg
+    └── projet-1.svg … projet-7.svg
 ```
 
 ## S'entraîner

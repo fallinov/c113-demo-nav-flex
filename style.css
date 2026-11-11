@@ -131,6 +131,7 @@ footer {
    5. La galerie : la grille de cartes
    ========================================================================== */
 
+<<<<<<< HEAD
 /* Étape 1 : la section devient une grille. Sans colonnes définies, il n'y en a qu'une :
    rien ne change à l'écran, sauf le gap qui espace les cartes */
 .galerie {
@@ -180,3 +181,6 @@ footer {
         gap: 0.5rem;
     }
 }
+=======
+/* La démo commence ici : .galerie est la section qui contient les sept cartes */
+>>>>>>> 27af4ab (Septième carte : HC Ajoie, vignette jaune)
