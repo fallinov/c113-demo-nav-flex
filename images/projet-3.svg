@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <rect width="400" height="240" fill="#b45309"/>
+  <circle cx="330" cy="60" r="36" fill="white" fill-opacity="0.25"/>
+  <rect x="40" y="150" width="200" height="14" rx="7" fill="white" fill-opacity="0.5"/>
+  <rect x="40" y="178" width="140" height="14" rx="7" fill="white" fill-opacity="0.35"/>
+  <text x="40" y="110" font-family="system-ui, sans-serif" font-size="40" font-weight="bold" fill="white">Projet 3</text>
+</svg>

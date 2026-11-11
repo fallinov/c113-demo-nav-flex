@@ -82,3 +82,33 @@ footer {
 .menu a[aria-current="page"] {
     background-color: var(--color-primary);
 }
+
+/* Une carte : fond blanc, coins arrondis, et l'image colle aux bords du haut */
+.carte {
+    background-color: white;
+    border-radius: 0.5rem; /* 8 px */
+    overflow: hidden; /* l'image suit les coins arrondis de la carte */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); /* légère ombre : la carte se détache du fond */
+}
+
+.carte img {
+    display: block; /* une image est inline par défaut : block retire l'espace sous l'image */
+    width: 100%; /* l'image prend toute la largeur de la carte, quelle que soit sa taille */
+    height: auto; /* la hauteur suit, les proportions sont gardées */
+}
+
+/* Le texte de la carte a son propre espacement, l'image n'en a pas */
+.carte h2,
+.carte p {
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
+.carte h2 {
+    padding-top: 1rem;
+    font-size: 1.125rem; /* 18 px */
+}
+
+.carte p {
+    padding-bottom: 1rem;
+}
