@@ -94,24 +94,6 @@ footer {
 }
 
 /* ==========================================================================
-   6. Grand écran : les media queries
-   ========================================================================== */
-
-/* Dès 768 px de large, il y a la place : on repasse en ligne */
-@media (min-width: 768px) {
-    .header {
-        flex-direction: row;
-        justify-content: space-between; /* axe principal (horizontal) */
-        align-items: center; /* axe secondaire (vertical) */
-    }
-
-    .menu {
-        flex-direction: row; /* les liens côte à côte */
-        gap: 0.5rem;
-    }
-}
-
-/* ==========================================================================
    4. Les cartes : une carte de projet
    ========================================================================== */
 
@@ -179,4 +161,22 @@ footer {
    Fenêtre de 375 px : une colonne. 600 px : deux. 960 px : trois. */
 .galerie {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* ==========================================================================
+   6. Grand écran : les media queries
+   ========================================================================== */
+
+/* Dès 768 px de large, il y a la place : on repasse en ligne */
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between; /* axe principal (horizontal) */
+        align-items: center; /* axe secondaire (vertical) */
+    }
+
+    .menu {
+        flex-direction: row; /* les liens côte à côte */
+        gap: 0.5rem;
+    }
 }
