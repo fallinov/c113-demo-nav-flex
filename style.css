@@ -112,3 +112,10 @@ footer {
 .carte p {
     padding-bottom: 1rem;
 }
+
+/* Étape 1 : la section devient une grille. Sans colonnes définies, il n'y en a qu'une :
+   rien ne change à l'écran, sauf le gap qui espace les cartes */
+.galerie {
+    display: grid;
+    gap: 1rem; /* espace entre les cases, en largeur et en hauteur */
+}
