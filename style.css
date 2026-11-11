@@ -1,3 +1,7 @@
+/* ==========================================================================
+   1. La palette et la base de la page
+   ========================================================================== */
+
 /* La palette en variables : une seule ligne à changer pour tout le site */
 :root {
     --color-bg: #f8fafc; /* fond de la page */
@@ -29,6 +33,10 @@ body {
    du texte dans son navigateur, les espacements suivent.
 */
 
+/* ==========================================================================
+   2. La mise en page : le contenu centré
+   ========================================================================== */
+
 /* Le contenu a une largeur maximale et reste centré dans la fenêtre */
 main,
 footer {
@@ -36,6 +44,10 @@ footer {
     margin: 0 auto; /* rien en haut et en bas, la place restante partagée à gauche et à droite */
     padding: 1rem 1.5rem; /* 16 px en haut et en bas, 24 px à gauche et à droite */
 }
+
+/* ==========================================================================
+   3. La navigation : le header, le logo et le menu
+   ========================================================================== */
 
 /* Une liste de navigation n'a pas besoin de puces ni du retrait par défaut */
 .menu {
@@ -81,6 +93,10 @@ footer {
     background-color: var(--color-primary);
 }
 
+/* ==========================================================================
+   6. Grand écran : les media queries
+   ========================================================================== */
+
 /* Dès 768 px de large, il y a la place : on repasse en ligne */
 @media (min-width: 768px) {
     .header {
@@ -94,6 +110,10 @@ footer {
         gap: 0.5rem;
     }
 }
+
+/* ==========================================================================
+   4. Les cartes : une carte de projet
+   ========================================================================== */
 
 /* Une carte : fond blanc, coins arrondis, et l'image colle aux bords du haut */
 .carte {
@@ -124,6 +144,10 @@ footer {
 .carte p {
     padding-bottom: 1rem;
 }
+
+/* ==========================================================================
+   5. La galerie : la grille de cartes
+   ========================================================================== */
 
 /* Étape 1 : la section devient une grille. Sans colonnes définies, il n'y en a qu'une :
    rien ne change à l'écran, sauf le gap qui espace les cartes */
