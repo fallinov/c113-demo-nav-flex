@@ -120,16 +120,24 @@ footer {
     gap: 1rem; /* espace entre les cases, en largeur et en hauteur */
 }
 
-/* Étape 2 : trois colonnes de même largeur. 1fr = une fraction de la place libre.
-   Problème : sur téléphone, les trois colonnes restent et les cartes sont écrasées.
-   repeat(3, 1fr) vaut 1fr 1fr 1fr. Règle gardée en commentaire, remplacée par l'étape 3 :
+/* Étape 2 : mobile d'abord. Sans media query, une colonne : c'est la règle du téléphone.
+   1fr = une fraction de la place libre, repeat(2, 1fr) vaut 1fr 1fr.
+   Règles gardées en commentaire, remplacées par l'étape 3 :
 
-.galerie {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 768px) {
+    .galerie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .galerie {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 */
 
-/* Étape 3 : le navigateur choisit le nombre de colonnes, sans media query.
+/* Étape 3 : le raccourci. Le navigateur choisit le nombre de colonnes, sans media query.
    repeat(auto-fill, …) : autant de colonnes que la place le permet.
    minmax(250px, 1fr) : chaque colonne fait au moins 250 px, et se partage le reste.
    Fenêtre de 375 px : une colonne. 600 px : deux. 960 px : trois. */
