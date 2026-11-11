@@ -119,3 +119,9 @@ footer {
     display: grid;
     gap: 1rem; /* espace entre les cases, en largeur et en hauteur */
 }
+
+/* Étape 2 : trois colonnes de même largeur. 1fr = une fraction de la place libre.
+   Problème : sur téléphone, les trois colonnes restent et les cartes sont écrasées */
+.galerie {
+    grid-template-columns: repeat(3, 1fr); /* même chose que 1fr 1fr 1fr */
+}
