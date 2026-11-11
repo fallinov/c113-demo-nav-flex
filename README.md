@@ -3,12 +3,30 @@
 Démo du cours 113 (séance 9) : une liste de liens brute devient une barre de navigation
 grâce à Flexbox.
 
-Tu es sur la branche **`solution-etape-9`** : la solution de la séance 9, plus l'étape 9
-(mise en page, séance 10). La solution de la séance 9 seule est sur la branche
-[`solution`](https://github.com/fallinov/c113-demo-nav-flex/tree/solution), le code de départ
-sur [`main`](https://github.com/fallinov/c113-demo-nav-flex). L'étape 8 (mobile d'abord,
-séance 11) a sa propre branche,
-[`solution-etape-8`](https://github.com/fallinov/c113-demo-nav-flex/tree/solution-etape-8).
+Tu es sur la branche **`grid-depart`** : le point de départ de la démo CSS Grid (séance 11).
+La page `projets.html` contient six cartes empilées, sans grille. Le résultat est sur la branche
+[`grid-solution`](https://github.com/fallinov/c113-demo-nav-flex/tree/grid-solution), en trois
+commits. Cette branche part de
+[`solution-etape-9`](https://github.com/fallinov/c113-demo-nav-flex/tree/solution-etape-9), la
+barre de navigation terminée.
+
+## La démo Grid, trois étapes
+
+Tout se passe dans `style.css`, sur `.galerie`, la `<section>` qui contient les six `<article>`.
+Teste à 375 px après chaque étape, puis élargis la fenêtre.
+
+| Étape | Règle | Ce qui change à l'écran |
+|-------|-------|-------------------------|
+| 1 | `display: grid` et `gap: 1rem` | Rien, sauf l'espace entre les cartes : une grille sans colonnes n'en a qu'une |
+| 2 | `grid-template-columns: repeat(3, 1fr)` | Trois colonnes sur grand écran… et trois colonnes écrasées sur téléphone |
+| 3 | `grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))` | Une colonne à 375 px, deux à 600 px, trois à 960 px, sans media query |
+
+- `display: grid` se met sur le **parent**, comme `display: flex` : ses **enfants directs**
+  deviennent les cases.
+- `1fr` est une fraction de la place libre : `repeat(3, 1fr)` vaut `1fr 1fr 1fr`.
+- `minmax(250px, 1fr)` : la colonne fait au moins 250 px, et se partage le reste.
+- `repeat(auto-fill, …)` : le navigateur place autant de colonnes que la largeur le permet.
+- Le contenu est plafonné à 60rem par `max-width` : la grille ne dépasse jamais trois colonnes.
 
 **Site en ligne** : https://fallinov.github.io/c113-demo-nav-flex/
 
@@ -53,8 +71,9 @@ c113-demo-nav-flex/
 ├── projets.html
 ├── a-propos.html
 ├── contact.html
-└── css/
-    └── style.css
+├── style.css
+└── images/
+    └── projet-1.svg … projet-6.svg
 ```
 
 ## S'entraîner
