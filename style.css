@@ -49,23 +49,11 @@ footer {
    3. La navigation : le header, le logo et le menu
    ========================================================================== */
 
-/* Une liste de navigation n'a pas besoin de puces ni du retrait par défaut */
-.menu {
-    list-style: none; /* retire les puces */
-    margin: 0; /* retire la marge par défaut du ul */
-    padding: 0; /* retire le retrait à gauche, qui est un padding */
-    display: flex; /* les <li> enfants se placent côte à côte */
-    flex-wrap: wrap; /* pas assez de place : les liens vont à la ligne */
-    gap: 0.5rem; /* espace entre les éléments, jamais avant le premier ni après le dernier */
-}
 
 /* Le header devient lui aussi un conteneur flex : logo à gauche, menu à droite */
 .header {
     display: flex;
-    justify-content: space-between; /* axe principal (horizontal) */
-    align-items: center; /* axe secondaire (vertical) */
-    flex-wrap: wrap; /* écran étroit : le menu passe sous le logo */
-    gap: 0.5rem;
+    flex-direction: column;
     padding: 1rem 1.5rem; /* 16 px en haut et en bas, 24 px à gauche et à droite */
     background-color: var(--color-dark);
 }
@@ -75,6 +63,16 @@ footer {
     font-weight: bold;
     color: white;
     text-decoration: none; /* retire le soulignement du lien */
+}
+
+/* Une liste de navigation n'a pas besoin de puces ni du retrait par défaut */
+.menu {
+    list-style: none; /* retire les puces */
+    margin: 0; /* retire la marge par défaut du ul */
+    padding: 0; /* retire le retrait à gauche, qui est un padding */
+    display: flex; /* les <li> enfants se placent côte à côte */
+    flex-direction: column;
+    gap: 0.5rem; /* espace entre les éléments, jamais avant le premier ni après le dernier */
 }
 
 /* Le lien occupe toute la case : la zone cliquable est plus grande */
@@ -134,3 +132,39 @@ footer {
    ========================================================================== */
 
 /* La démo commence ici : .galerie est la section qui contient les sept cartes */
+
+.galerie {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+
+
+
+/* ==========================================================================
+   6. Responsive
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; /* alignement vertical centré */
+    }
+
+    .menu {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    /*.galerie{*/
+    /*    grid-template-columns: repeat(2, 1fr);*/
+    /*}*/
+}
+
+@media (min-width: 1024px) {
+    /*.galerie{*/
+    /*    grid-template-columns: repeat(3, 1fr);*/
+    /*}*/
+}
