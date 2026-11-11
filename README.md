@@ -3,10 +3,10 @@
 Démo du cours 113 (séance 9) : une liste de liens brute devient une barre de navigation
 grâce à Flexbox.
 
-Tu es sur la branche **`grid-depart`** : le point de départ de la démo CSS Grid (séance 11).
-La page `projets.html` contient six cartes empilées, sans grille. Le résultat est sur la branche
-[`grid-solution`](https://github.com/fallinov/c113-demo-nav-flex/tree/grid-solution), en trois
-commits. Cette branche part de
+Tu es sur la branche **`grid-solution`** : le résultat de la démo CSS Grid (séance 11), en
+trois commits, un par étape. Le point de départ, six cartes empilées sans grille, est sur la
+branche [`grid-depart`](https://github.com/fallinov/c113-demo-nav-flex/tree/grid-depart). Les
+deux partent de
 [`solution-etape-9`](https://github.com/fallinov/c113-demo-nav-flex/tree/solution-etape-9), la
 barre de navigation terminée.
 
@@ -18,12 +18,14 @@ Teste à 375 px après chaque étape, puis élargis la fenêtre.
 | Étape | Règle | Ce qui change à l'écran |
 |-------|-------|-------------------------|
 | 1 | `display: grid` et `gap: 1rem` | Rien, sauf l'espace entre les cartes : une grille sans colonnes n'en a qu'une |
-| 2 | `grid-template-columns: repeat(3, 1fr)` | Trois colonnes sur grand écran… et trois colonnes écrasées sur téléphone |
-| 3 | `grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))` | Une colonne à 375 px, deux à 600 px, trois à 960 px, sans media query |
+| 2 | `@media (min-width: 768px)` : `repeat(2, 1fr)`, puis `(min-width: 1024px)` : `repeat(3, 1fr)` | Mobile d'abord : une colonne sur téléphone, deux sur tablette, trois sur grand écran |
+| 3 | `grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))` | Le raccourci : une colonne à 375 px, deux à 600 px, trois à 960 px, sans media query |
 
 - `display: grid` se met sur le **parent**, comme `display: flex` : ses **enfants directs**
   deviennent les cases.
 - `1fr` est une fraction de la place libre : `repeat(3, 1fr)` vaut `1fr 1fr 1fr`.
+- Mobile d'abord : la règle sans media query est celle du téléphone, `min-width` ajoute les
+  colonnes sur les écrans plus larges.
 - `minmax(250px, 1fr)` : la colonne fait au moins 250 px, et se partage le reste.
 - `repeat(auto-fill, …)` : le navigateur place autant de colonnes que la largeur le permet.
 - Le contenu est plafonné à 60rem par `max-width` : la grille ne dépasse jamais trois colonnes.
