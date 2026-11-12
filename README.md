@@ -3,11 +3,36 @@
 Démo du cours 113 (séance 9) : une liste de liens brute devient une barre de navigation
 grâce à Flexbox.
 
-Tu es sur la branche **`seance-12-solution`** : le résultat de la démo images et performance
-(séance 12). Le point de départ, avec la photo brute de 3,9 Mo, est sur
-[`seance-12-depart`](https://github.com/fallinov/c113-demo-nav-flex/tree/seance-12-depart). Ici,
-la photo brute a été supprimée : il ne reste que le WebP de 1600 px, et la bannière de
-`index.html` l'affiche en fond, avec un voile sombre pour garder le titre lisible.
+Tu es sur la branche **`seance-13-depart`** : le point de départ de la démo « casser, lire,
+réparer » (séance 13). Trois pages sont propres. La page **À propos** contient les erreurs
+classiques d'un projet d'élève, une pour chaque outil de contrôle du Jalon 3. Le résultat corrigé
+est sur [`seance-13-solution`](https://github.com/fallinov/c113-demo-nav-flex/tree/seance-13-solution).
+
+## La démo contrôle, quatre outils
+
+1. **Un site propre d'abord** : `index.html` collé dans le
+   [validateur W3C](https://validator.w3.org/#validate_by_input), zéro erreur.
+2. **`a-propos.html` dans le validateur** : huit messages pour cinq fautes. On lit le premier, on
+   corrige, on revalide. Une balise `<a>` non fermée fait apparaître trois erreurs à elle seule.
+3. **WAVE** sur la page en ligne : icônes rouges, panneau Structure pour l'ordre des titres,
+   onglet Contraste.
+4. **Le téléphone** : DevTools en mode appareil, 375 px. La page défile horizontalement et
+   l'onglet Réseau montre une image de 3,9 Mo.
+
+| Faute dans `a-propos.html` | Qui la voit | Ce que l'outil dit |
+|---|---|---|
+| `<html>` sans `lang="fr"` | W3C (avertissement), WAVE (erreur) | « Consider adding a lang attribute » / « Language missing » |
+| `<meta name="viewport">` absent | Le téléphone | Page dézoomée, texte minuscule |
+| `<img>` sans `alt` | W3C, WAVE | « An img element must have an alt attribute » / « Missing alternative text » |
+| `creux-du-van.jpg` de 3,9 Mo, 5488 px | DevTools Réseau, défilement à 375 px | 3,9 Mo au lieu de 217 Ko ; la page fait 5512 px de large |
+| `<h3>` juste après le `<h1>` | W3C, WAVE | « skipping 1 heading level » / « Skipped heading level » |
+| `<h2>` dans un `<p>` | W3C | « No p element in scope but a p end tag seen » |
+| Texte nu dans le `<ul>` (le `<li>` oublié) | W3C | « Text not allowed in element ul in this context » |
+| `<a>` jamais fermé | W3C | « Unclosed element a », puis deux erreurs de plus sur `</p>` et `</main>` |
+| Légende en gris clair `#9ca3af` sur fond clair | WAVE | « Very low contrast », 2,5:1 au lieu de 4,5:1 |
+
+Note : du texte posé directement dans `<body>` n'est **pas** une erreur pour le validateur. C'est
+dans une liste (`<ul>`) ou un tableau qu'un texte sans balise est refusé.
 
 ## La démo images, quatre étapes
 
