@@ -3,12 +3,11 @@
 Démo du cours 113 (séance 9) : une liste de liens brute devient une barre de navigation
 grâce à Flexbox.
 
-Tu es sur la branche **`seance-12-depart`** : le point de départ de la démo images et
-performance (séance 12). Elle part de
-[`grid-solution`](https://github.com/fallinov/c113-demo-nav-flex/tree/grid-solution) et ajoute
-une photo brute de 3,9 Mo dans `img/`, pas encore utilisée, et une bannière texte sur
-`index.html`. Le résultat est sur
-[`seance-12-solution`](https://github.com/fallinov/c113-demo-nav-flex/tree/seance-12-solution).
+Tu es sur la branche **`seance-12-solution`** : le résultat de la démo images et performance
+(séance 12). Le point de départ, avec la photo brute de 3,9 Mo, est sur
+[`seance-12-depart`](https://github.com/fallinov/c113-demo-nav-flex/tree/seance-12-depart). Ici,
+la photo brute a été supprimée : il ne reste que le WebP de 1600 px, et la bannière de
+`index.html` l'affiche en fond, avec un voile sombre pour garder le titre lisible.
 
 ## La démo images, quatre étapes
 
@@ -17,7 +16,7 @@ Sur `index.html` et `style.css`, DevTools ouverts sur l'onglet Réseau.
 | Étape | Ce qu'on fait | Ce qu'on voit |
 |-------|---------------|---------------|
 | 1 | `<img src="img/creux-du-van.jpg">` dans la bannière | Réseau : 3,9 Mo, plusieurs secondes en « 3G lente » |
-| 2 | Squoosh : 1600 px de large, WebP, qualité 75 | Réseau : moins de 200 Ko, la même photo à l'œil |
+| 2 | Squoosh : 1600 px de large, WebP, qualité 65 à 75 | Réseau : moins de 200 Ko, la même photo à l'œil |
 | 3 | La photo passe en fond : `background-image`, `background-size: cover`, `background-position`, `background-color` de secours | La bannière est remplie, le texte est posé dessus |
 | 4 | Un voile sombre et du texte blanc | Le titre reste lisible, contraste vérifié |
 

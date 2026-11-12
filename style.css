@@ -164,6 +164,41 @@ footer {
 }
 
 /* ==========================================================================
+   7. La bannière d'accueil : une photo en fond, un titre lisible dessus
+   ========================================================================== */
+
+/* Le fichier : creux-du-van.jpg brut = 3,9 Mo, 5488 px de large.
+   Passé par Squoosh (1600 px, WebP, qualité 65) = moins de 200 Ko. Même photo à l'œil.
+   La règle du projet : aucune image au-dessus de 300 Ko */
+.banniere {
+    /* Étape 3 : la photo en fond. Un décor va en CSS, une image qui informe va en <img> */
+    background-color: var(--color-dark); /* de secours : visible tant que la photo charge, ou si elle manque */
+    background-image: url("img/creux-du-van.webp"); /* chemin relatif au fichier CSS */
+    background-size: cover; /* la photo remplit la boîte, quitte à être rognée */
+    background-position: center; /* ce qui est rogné l'est sur les bords, pas au centre */
+    padding: 4rem 1.5rem; /* la hauteur de la bannière vient du padding, pas d'une height fixe */
+    border-radius: 0.5rem;
+    color: white;
+    text-align: center;
+}
+
+/* Étape 4 : un voile sombre entre la photo et le texte. Sans lui, le blanc se perd dans le ciel.
+   Deux fonds dans la même propriété : le premier est au-dessus */
+.banniere {
+    background-image: linear-gradient(rgba(31, 41, 55, 0.6), rgba(31, 41, 55, 0.6)), url("img/creux-du-van.webp");
+}
+
+.banniere h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2.5rem; /* 40 px */
+}
+
+.banniere p {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+/* ==========================================================================
    6. Grand écran : les media queries
    ========================================================================== */
 
