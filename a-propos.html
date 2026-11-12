@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<!-- Faute 1 : lang manquait. WAVE le signale en erreur, le validateur en avertissement -->
+<html lang="fr">
 <head>
     <meta charset="utf-8">
+    <!-- Faute 2 : le viewport manquait. Sans lui, un téléphone dézoome la page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>À propos — Mon portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -29,21 +32,27 @@
     <h1>À propos</h1>
     <p>Étudiant en première année à l'ESIG, je construis mes premiers sites en HTML et en CSS. J'aime comprendre comment une page est faite, pas seulement l'utiliser.</p>
 
-    <img class="photo" src="img/creux-du-van.jpg">
+    <!-- Faute 3 : alt manquait. Faute 4 : le JPG brut de 3,9 Mo est remplacé par le WebP de 217 Ko -->
+    <img class="photo" src="img/creux-du-van.webp" alt="Le cirque rocheux du Creux du Van sous un ciel bleu">
+    <!-- Faute 9 : la légende était en gris clair, 2,4:1 ; voir .legende dans style.css -->
     <p class="legende">Le Creux du Van, mon coin préféré du Jura.</p>
 
-    <h3>Mon parcours</h3>
+    <!-- Faute 5 : h3 juste après le h1, un niveau sauté. Les titres descendent un niveau à la fois -->
+    <h2>Mon parcours</h2>
     <p>Maturité gymnasiale en 2025, puis l'ESIG à Delémont. Avant ça, beaucoup de temps passé à bricoler des sites sans comprendre ce que je faisais.</p>
 
-    <p><h2>Mes compétences</h2></p>
+    <!-- Faute 6 : le h2 était dans un p. Un paragraphe ne contient que du texte et des balises de texte -->
+    <h2>Mes compétences</h2>
     <ul>
         <li>HTML : la structure et la sémantique</li>
         <li>CSS : Flexbox, Grid, le mobile d'abord</li>
-        Git et GitHub : commit, push, GitHub Pages
+        <!-- Faute 7 : le li manquait, le texte était posé directement dans le ul -->
+        <li>Git et GitHub : commit, push, GitHub Pages</li>
     </ul>
 
     <h2>Me retrouver</h2>
-    <p>Mon code est sur <a href="https://github.com/fallinov">GitHub, et mes projets sont sur la page Projets de ce site.</p>
+    <!-- Faute 8 : le lien n'était jamais fermé. Une balise ouverte le reste jusqu'à son </a> -->
+    <p>Mon code est sur <a href="https://github.com/fallinov">GitHub</a>, et mes projets sont sur la page Projets de ce site.</p>
 </main>
 
 <footer>

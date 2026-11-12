@@ -220,8 +220,19 @@ footer {
    8. La page À propos : la photo et sa légende
    ========================================================================== */
 
+/* Une photo plus large que l'écran déborde et fait défiler la page horizontalement.
+   max-width: 100% : jamais plus large que son conteneur. height: auto garde les proportions */
+.photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* Un texte secondaire peut être plus petit, mais pas moins contrasté que 4,5:1.
+   #9ca3af sur le fond clair = 2,4:1, refusé par WAVE. #4b5563 = 7,2:1 */
 .legende {
-    color: #9ca3af;
+    color: #4b5563;
     font-size: 0.875rem; /* 14 px */
     margin-top: 0.25rem;
 }

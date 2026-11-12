@@ -3,10 +3,10 @@
 Démo du cours 113 (séance 9) : une liste de liens brute devient une barre de navigation
 grâce à Flexbox.
 
-Tu es sur la branche **`seance-13-depart`** : le point de départ de la démo « casser, lire,
-réparer » (séance 13). Trois pages sont propres. La page **À propos** contient les erreurs
-classiques d'un projet d'élève, une pour chaque outil de contrôle du Jalon 3. Le résultat corrigé
-est sur [`seance-13-solution`](https://github.com/fallinov/c113-demo-nav-flex/tree/seance-13-solution).
+Tu es sur la branche **`seance-13-solution`** : le résultat de la démo « casser, lire,
+réparer » (séance 13). La page **À propos** est corrigée, chaque faute est commentée dans
+`a-propos.html` et `style.css`. Le point de départ, avec les neuf fautes, est sur
+[`seance-13-depart`](https://github.com/fallinov/c113-demo-nav-flex/tree/seance-13-depart).
 
 ## La démo contrôle, quatre outils
 
@@ -19,7 +19,7 @@ est sur [`seance-13-solution`](https://github.com/fallinov/c113-demo-nav-flex/tr
 4. **Le téléphone** : DevTools en mode appareil, 375 px. La page défile horizontalement et
    l'onglet Réseau montre une image de 3,9 Mo.
 
-| Faute dans `a-propos.html` | Qui la voit | Ce que l'outil dit |
+| Faute dans `a-propos.html` (branche de départ) | Qui la voit | Ce que l'outil dit |
 |---|---|---|
 | `<html>` sans `lang="fr"` | W3C (avertissement), WAVE (erreur) | « Consider adding a lang attribute » / « Language missing » |
 | `<meta name="viewport">` absent | Le téléphone | Page dézoomée, texte minuscule |
@@ -29,7 +29,7 @@ est sur [`seance-13-solution`](https://github.com/fallinov/c113-demo-nav-flex/tr
 | `<h2>` dans un `<p>` | W3C | « No p element in scope but a p end tag seen » |
 | Texte nu dans le `<ul>` (le `<li>` oublié) | W3C | « Text not allowed in element ul in this context » |
 | `<a>` jamais fermé | W3C | « Unclosed element a », puis deux erreurs de plus sur `</p>` et `</main>` |
-| Légende en gris clair `#9ca3af` sur fond clair | WAVE | « Very low contrast », 2,5:1 au lieu de 4,5:1 |
+| Légende en gris clair `#9ca3af` sur fond clair | WAVE | « Very low contrast », 2,4:1 au lieu de 4,5:1 |
 
 Note : du texte posé directement dans `<body>` n'est **pas** une erreur pour le validateur. C'est
 dans une liste (`<ul>`) ou un tableau qu'un texte sans balise est refusé.
