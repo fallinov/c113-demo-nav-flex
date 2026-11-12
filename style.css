@@ -168,7 +168,7 @@ footer {
    ========================================================================== */
 
 /* Le fichier : creux-du-van.jpg brut = 3,9 Mo, 5488 px de large.
-   Passé par Squoosh (1600 px, WebP, qualité 65) = moins de 200 Ko. Même photo à l'œil.
+   Passé par Squoosh (1600 px, WebP, qualité 65) = 217 Ko, sous les 300 Ko du projet. Même photo à l'œil.
    La règle du projet : aucune image au-dessus de 300 Ko */
 .banniere {
     /* Étape 3 : la photo en fond. Un décor va en CSS, une image qui informe va en <img> */

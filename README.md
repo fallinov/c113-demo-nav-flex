@@ -16,7 +16,7 @@ Sur `index.html` et `style.css`, DevTools ouverts sur l'onglet Réseau.
 | Étape | Ce qu'on fait | Ce qu'on voit |
 |-------|---------------|---------------|
 | 1 | `<img src="img/creux-du-van.jpg">` dans la bannière | Réseau : 3,9 Mo, plusieurs secondes en « 3G lente » |
-| 2 | Squoosh : 1600 px de large, WebP, qualité 65 à 75 | Réseau : moins de 200 Ko, la même photo à l'œil |
+| 2 | Squoosh : 1600 px de large, WebP, qualité 65 à 75 | Réseau : 217 Ko au lieu de 3,9 Mo, la même photo à l'œil |
 | 3 | La photo passe en fond : `background-image`, `background-size: cover`, `background-position`, `background-color` de secours | La bannière est remplie, le texte est posé dessus |
 | 4 | Un voile sombre et du texte blanc | Le titre reste lisible, contraste vérifié |
 
