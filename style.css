@@ -18,6 +18,11 @@ body {
     background-color: var(--color-bg);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /*
    Les unités rem et em : deux tailles relatives au texte, à la place des px.
 
@@ -137,6 +142,26 @@ footer {
     display: grid;
     gap: 1rem; /* espace entre les cases, en largeur et en hauteur */
 }
+
+/* ==========================================================================
+   6. La bannière
+   ========================================================================== */
+.banniere {
+    padding: 4rem 1.5rem;
+    background-color: rgba(31, 41, 55, .9);
+    background-image: linear-gradient(rgba(31, 41, 55, 0),
+                      rgba(31, 41, 55, .9)),
+                      url("img/creux-du-van.webp");
+    background-size: cover;
+    background-position: center;
+    color: var(--color-bg);
+    text-align: center;
+}
+
+/*.banniere * {*/
+/*    background-color: rgba(0, 0, 0, .6);*/
+/*}*/
+
 
 /* Étape 2 : mobile d'abord. Sans media query, une colonne : c'est la règle du téléphone.
    1fr = une fraction de la place libre, repeat(2, 1fr) vaut 1fr 1fr.
